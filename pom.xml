@@ -4,7 +4,7 @@
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>land.fx</groupId>
-  <artifactId>fula</artifactId>
+  <artifactId>fulaandroid</artifactId>
   <version>0.8.0</version>
   <distributionManagement>
        <repository>
