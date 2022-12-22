@@ -6,4 +6,11 @@
   <groupId>land.fx</groupId>
   <artifactId>go-fula</artifactId>
   <version>0.8.0</version>
+  <distributionManagement>
+       <repository>
+         <id>github</id>
+         <name>Functionland repo</name>
+         <url>https://maven.pkg.github.com/functionland/fula-build-aar</url>
+       </repository>
+   </distributionManagement>
 </project>
