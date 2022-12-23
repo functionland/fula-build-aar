@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/functionland/fula-build-aar.svg)](https://jitpack.io/#functionland/fula-build-aar)
+
 # fula-build-aar
 Android Wrapper for fula mobile
 
