@@ -8,3 +8,5 @@ sudo cp orig/interface_linux.go.bak $INTERFACE_SRC_FILE
 sudo cp orig/netlink_linux.go.bak $NETLINK_SRC_FILE
 sudo $GOBIN install -a net
 sudo $GOBIN install -a syscall
+sudo rm -rf orig/*
+sudo rm -rf patched

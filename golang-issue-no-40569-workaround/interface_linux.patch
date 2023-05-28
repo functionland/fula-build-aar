@@ -1,7 +1,7 @@
-diff --git a/mobile/golang-issue-no-40569-workaround/interface_linux.go b/mobile/golang-issue-no-40569-workaround/interface_linux.go
-index 441ab2f..ed7300d 100644
---- a/mobile/golang-issue-no-40569-workaround/interface_linux.go
-+++ b/mobile/golang-issue-no-40569-workaround/interface_linux.go
+diff --git a/golang-issue-no-40569-workaround/interface_linux.go b/golang-issue-no-40569-workaround/interface_linux.go
+index 441ab2f..5179d7e 100644
+--- a/golang-issue-no-40569-workaround/interface_linux.go
++++ b/golang-issue-no-40569-workaround/interface_linux.go
 @@ -6,6 +6,7 @@ package net
  
  import (
@@ -10,6 +10,15 @@ index 441ab2f..ed7300d 100644
  	"syscall"
  	"unsafe"
  )
+@@ -14,7 +15,7 @@ import (
+ // network interfaces. Otherwise it returns a mapping of a specific
+ // interface.
+ func interfaceTable(ifindex int) ([]Interface, error) {
+-	tab, err := syscall.NetlinkRIB(syscall.RTM_GETLINK, syscall.AF_UNSPEC)
++	tab, err := syscall.NetlinkRIB(syscall.RTM_GETADDR, syscall.AF_UNSPEC)
+ 	if err != nil {
+ 		return nil, os.NewSyscallError("netlinkrib", err)
+ 	}
 @@ -130,7 +131,7 @@ func interfaceAddrTable(ifi *Interface) ([]Addr, error) {
  	if ifi == nil {
  		var err error
@@ -19,10 +28,11 @@ index 441ab2f..ed7300d 100644
  			return nil, err
  		}
  	}
-@@ -150,6 +151,16 @@ loop:
+@@ -150,7 +151,16 @@ loop:
  			break loop
  		case syscall.RTM_NEWADDR:
  			ifam := (*syscall.IfAddrmsg)(unsafe.Pointer(&m.Data[0]))
+-			if len(ift) != 0 || ifi.Index == int(ifam.Index) {
 +			if ifi == nil && len(ift) == 0 {
 +				attrs, err := syscall.ParseNetlinkRouteAttr(&m)
 +				if err != nil {
@@ -32,7 +42,7 @@ index 441ab2f..ed7300d 100644
 +				if ifa != nil {
 +					ifat = append(ifat, ifa)
 +				}
-+			}
- 			if len(ift) != 0 || ifi.Index == int(ifam.Index) {
++			} else if len(ift) != 0 || ifi.Index == int(ifam.Index) {
  				if len(ift) != 0 {
  					var err error
+ 					ifi, err = interfaceByIndex(ift, int(ifam.Index))

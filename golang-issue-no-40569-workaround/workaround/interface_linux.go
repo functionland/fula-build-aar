@@ -15,7 +15,7 @@ import (
 // network interfaces. Otherwise it returns a mapping of a specific
 // interface.
 func interfaceTable(ifindex int) ([]Interface, error) {
-	tab, err := syscall.NetlinkRIB(syscall.RTM_GETLINK, syscall.AF_UNSPEC)
+	tab, err := syscall.NetlinkRIB(syscall.RTM_GETADDR, syscall.AF_UNSPEC)
 	if err != nil {
 		return nil, os.NewSyscallError("netlinkrib", err)
 	}
@@ -160,8 +160,7 @@ loop:
 				if ifa != nil {
 					ifat = append(ifat, ifa)
 				}
-			}
-			if len(ift) != 0 || ifi.Index == int(ifam.Index) {
+			} else if len(ift) != 0 || ifi.Index == int(ifam.Index) {
 				if len(ift) != 0 {
 					var err error
 					ifi, err = interfaceByIndex(ift, int(ifam.Index))

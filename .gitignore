@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+golang-issue-no-40569-workaround/patched
+golang-issue-no-40569-workaround/orig
