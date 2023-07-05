@@ -30,7 +30,7 @@ require (
 	github.com/filecoin-project/go-statestore v0.2.0 // indirect
 	github.com/flynn/noise v1.0.0 // indirect
 	github.com/francoispqt/gojay v1.2.13 // indirect
-	github.com/functionland/go-fula v1.10.1 // indirect
+	github.com/functionland/go-fula v1.10.2 // indirect
 	github.com/go-logr/logr v1.2.4 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20230315185526-52ccab3ef572 // indirect
