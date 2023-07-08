@@ -2,6 +2,8 @@ module main.go
 
 go 1.19
 
+replace github.com/multiformats/go-multiaddr => github.com/masih/go-multiaddr v0.0.0-20230705203729-a229ac6e52f4
+
 require (
 	github.com/AndreasBriese/bbloom v0.0.0-20190825152654-46b345b51c96 // indirect
 	github.com/Microsoft/go-winio v0.6.1 // indirect
@@ -30,7 +32,7 @@ require (
 	github.com/filecoin-project/go-statestore v0.2.0 // indirect
 	github.com/flynn/noise v1.0.0 // indirect
 	github.com/francoispqt/gojay v1.2.13 // indirect
-	github.com/functionland/anet v0.0.2-0.20230705144238-d8b3b0a8532c // indirect
+	github.com/functionland/anet v1.0.0 // indirect
 	github.com/functionland/go-fula v1.10.2 // indirect
 	github.com/go-logr/logr v1.2.4 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
