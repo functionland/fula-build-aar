@@ -122,6 +122,8 @@ github.com/functionland/go-fula v1.11.1 h1:xxZzzKZBAMpRp6i2QupvEcloJcFcX73l3AzEw
 github.com/functionland/go-fula v1.11.1/go.mod h1:bETCHfcIldhr00KS9/mzQMu3UOQRQNNw7Xntt9vCP0Y=
 github.com/functionland/go-fula v1.12.0 h1:f72f+lO5frKT7WSGVey7IK+4lub5iYZR3FN0mQlDWjU=
 github.com/functionland/go-fula v1.12.0/go.mod h1:bETCHfcIldhr00KS9/mzQMu3UOQRQNNw7Xntt9vCP0Y=
+github.com/functionland/go-fula v1.13.0 h1:t6aNWGvwJa7IRn9xADI4nTX95chJur6/7ds4Y1G3qbI=
+github.com/functionland/go-fula v1.13.0/go.mod h1:bETCHfcIldhr00KS9/mzQMu3UOQRQNNw7Xntt9vCP0Y=
 github.com/ghodss/yaml v1.0.0/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=
 github.com/gliderlabs/ssh v0.1.1/go.mod h1:U7qILu1NlMHj9FlMhZLlkCdDnU1DBEAqr0aevW3Awn0=
 github.com/go-check/check v0.0.0-20180628173108-788fd7840127/go.mod h1:9ES+weclKsC9YodN5RgxqK/VD9HM9JsCSh7rNhMZE98=
