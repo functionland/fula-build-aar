@@ -2,4 +2,4 @@ before_install:
   - git lfs pull
 install: 
   - FILE="-Dfile=mobile.aar" 
-  - mvn install:install-file $FILE -DgroupId=land.fx -DartifactId=fulamobile -Dversion=1.55.16 -Dpackaging=aar -DgeneratePom=true
+  - mvn install:install-file $FILE -DgroupId=land.fx -DartifactId=fulamobile -Dversion=1.56.0 -Dpackaging=aar -DgeneratePom=true
