@@ -9,4 +9,9 @@ Created with gomobile with Android NDK 25:
 gomobile bind -v -o mobile.aar -target=android -androidapi 26 github.com/functionl
 and/go-fula/mobile 
 
-or cd go-fula and gomobile bind -v -o mobile.aar -target=android -androidapi 26 ./mobile
+or cd go-fula and 
+
+```
+gomobile bind -v -o mobile.aar -target=android -ldflags="-checklinkname=0" -androidapi 26 ./mobile
+```
+
